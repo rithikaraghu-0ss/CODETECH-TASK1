@@ -1,0 +1,378 @@
+
+[ec2-user@ip-172-31-24-168 ~]$ sudo su-
+sudo: su-: command not found
+[ec2-user@ip-172-31-24-168 ~]$ sudo su -
+[root@ip-172-31-24-168 ~]# yum update -y
+Last metadata expiration check: 0:02:12 ago on Mon Jul 29 11:04:04 2024.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@ip-172-31-24-168 ~]# yum install -y httpd
+Last metadata expiration check: 0:02:26 ago on Mon Jul 29 11:04:04 2024.
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                    Architecture                  Version                                        Repository                          Size
+==================================================================================================================================================================
+Installing:
+ httpd                                      x86_64                        2.4.61-1.amzn2023                              amazonlinux                         47 k
+Installing dependencies:
+ apr                                        x86_64                        1.7.2-2.amzn2023.0.2                           amazonlinux                        129 k
+ apr-util                                   x86_64                        1.6.3-1.amzn2023.0.1                           amazonlinux                         98 k
+ generic-logos-httpd                        noarch                        18.0.0-12.amzn2023.0.3                         amazonlinux                         19 k
+ httpd-core                                 x86_64                        2.4.61-1.amzn2023                              amazonlinux                        1.4 M
+ httpd-filesystem                           noarch                        2.4.61-1.amzn2023                              amazonlinux                         14 k
+ httpd-tools                                x86_64                        2.4.61-1.amzn2023                              amazonlinux                         81 k
+ libbrotli                                  x86_64                        1.0.9-4.amzn2023.0.2                           amazonlinux                        315 k
+ mailcap                                    noarch                        2.1.49-3.amzn2023.0.3                          amazonlinux                         33 k
+Installing weak dependencies:
+ apr-util-openssl                           x86_64                        1.6.3-1.amzn2023.0.1                           amazonlinux                         17 k
+ mod_http2                                  x86_64                        2.0.27-1.amzn2023.0.2                          amazonlinux                        166 k
+ mod_lua                                    x86_64                        2.4.61-1.amzn2023                              amazonlinux                         61 k
+
+Transaction Summary
+==================================================================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Downloading Packages:
+(1/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                          279 kB/s |  17 kB     00:00    
+(2/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                                  1.4 MB/s |  98 kB     00:00    
+(3/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm                                                                                       1.8 MB/s | 129 kB     00:00    
+(4/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                                     1.1 MB/s |  19 kB     00:00    
+(5/12): httpd-2.4.61-1.amzn2023.x86_64.rpm                                                                                        2.4 MB/s |  47 kB     00:00    
+(6/12): httpd-filesystem-2.4.61-1.amzn2023.noarch.rpm                                                                             707 kB/s |  14 kB     00:00    
+(7/12): httpd-tools-2.4.61-1.amzn2023.x86_64.rpm                                                                                  3.8 MB/s |  81 kB     00:00    
+(8/12): httpd-core-2.4.61-1.amzn2023.x86_64.rpm                                                                                    26 MB/s | 1.4 MB     00:00    
+(9/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                                                                  1.9 MB/s |  33 kB     00:00    
+(10/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                                8.3 MB/s | 315 kB     00:00    
+(11/12): mod_lua-2.4.61-1.amzn2023.x86_64.rpm                                                                                     3.4 MB/s |  61 kB     00:00    
+(12/12): mod_http2-2.0.27-1.amzn2023.0.2.x86_64.rpm                                                                               4.9 MB/s | 166 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                              11 MB/s | 2.3 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                                         1/12 
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                            2/12 
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                                    3/12 
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                                    4/12 
+  Installing       : httpd-tools-2.4.61-1.amzn2023.x86_64                                                                                                    5/12 
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                                   6/12 
+  Running scriptlet: httpd-filesystem-2.4.61-1.amzn2023.noarch                                                                                               7/12 
+  Installing       : httpd-filesystem-2.4.61-1.amzn2023.noarch                                                                                               7/12 
+  Installing       : httpd-core-2.4.61-1.amzn2023.x86_64                                                                                                     8/12 
+  Installing       : mod_http2-2.0.27-1.amzn2023.0.2.x86_64                                                                                                  9/12 
+  Installing       : mod_lua-2.4.61-1.amzn2023.x86_64                                                                                                       10/12 
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                      11/12 
+  Installing       : httpd-2.4.61-1.amzn2023.x86_64                                                                                                         12/12 
+  Running scriptlet: httpd-2.4.61-1.amzn2023.x86_64                                                                                                         12/12 
+  Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                                         1/12 
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                                    2/12 
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                            3/12 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                       4/12 
+  Verifying        : httpd-2.4.61-1.amzn2023.x86_64                                                                                                          5/12 
+  Verifying        : httpd-core-2.4.61-1.amzn2023.x86_64                                                                                                     6/12 
+  Verifying        : httpd-filesystem-2.4.61-1.amzn2023.noarch                                                                                               7/12 
+  Verifying        : httpd-tools-2.4.61-1.amzn2023.x86_64                                                                                                    8/12 
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                                   9/12 
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                                   10/12 
+  Verifying        : mod_http2-2.0.27-1.amzn2023.0.2.x86_64                                                                                                 11/12 
+  Verifying        : mod_lua-2.4.61-1.amzn2023.x86_64                                                                                                       12/12 
+
+Installed:
+  apr-1.7.2-2.amzn2023.0.2.x86_64                            apr-util-1.6.3-1.amzn2023.0.1.x86_64            apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64         
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch          httpd-2.4.61-1.amzn2023.x86_64                  httpd-core-2.4.61-1.amzn2023.x86_64                  
+  httpd-filesystem-2.4.61-1.amzn2023.noarch                  httpd-tools-2.4.61-1.amzn2023.x86_64            libbrotli-1.0.9-4.amzn2023.0.2.x86_64                
+  mailcap-2.1.49-3.amzn2023.0.3.noarch                       mod_http2-2.0.27-1.amzn2023.0.2.x86_64          mod_lua-2.4.61-1.amzn2023.x86_64                     
+
+Complete!
+[root@ip-172-31-24-168 ~]# systemctl status httpd
+○ httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:httpd.service(8)
+[root@ip-172-31-24-168 ~]# mkdir temp
+[root@ip-172-31-24-168 ~]# wget https://www.free-css.com/assets/files/free-css-templates/download/page296/klinik.zip
+--2024-07-29 11:07:43--  https://www.free-css.com/assets/files/free-css-templates/download/page296/klinik.zip
+Resolving www.free-css.com (www.free-css.com)... 217.160.0.242, 2001:8d8:100f:f000::28f
+Connecting to www.free-css.com (www.free-css.com)|217.160.0.242|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 792999 (774K) [application/zip]
+Saving to: ‘klinik.zip’
+
+klinik.zip                               100%[================================================================================>] 774.41K   409KB/s    in 1.9s    
+
+2024-07-29 11:07:47 (409 KB/s) - ‘klinik.zip’ saved [792999/792999]
+
+[root@ip-172-31-24-168 ~]# ls -lrt
+total 776
+-rw-r--r--. 1 root root 792999 Feb  6  2022 klinik.zip
+drwxr-xr-x. 2 root root      6 Jul 29 11:07 temp
+[root@ip-172-31-24-168 ~]# cd klinik
+-bash: cd: klinik: No such file or directory
+[root@ip-172-31-24-168 ~]# cd temp
+[root@ip-172-31-24-168 temp]# ls -lrt
+total 0
+[root@ip-172-31-24-168 temp]# unzip klinik.zip
+unzip:  cannot find or open klinik.zip, klinik.zip.zip or klinik.zip.ZIP.
+[root@ip-172-31-24-168 temp]# ls -lrt
+total 0
+[root@ip-172-31-24-168 temp]# unzip klinik.zip
+unzip:  cannot find or open klinik.zip, klinik.zip.zip or klinik.zip.ZIP.
+[root@ip-172-31-24-168 temp]# wget https://www.free-css.com/assets/files/free-css-templates/download/page295/kider.zip
+--2024-07-29 11:15:07--  https://www.free-css.com/assets/files/free-css-templates/download/page295/kider.zip
+Resolving www.free-css.com (www.free-css.com)... 217.160.0.242, 2001:8d8:100f:f000::28f
+Connecting to www.free-css.com (www.free-css.com)|217.160.0.242|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 865110 (845K) [application/zip]
+Saving to: ‘kider.zip’
+
+kider.zip                                100%[================================================================================>] 844.83K   435KB/s    in 1.9s    
+
+2024-07-29 11:15:10 (435 KB/s) - ‘kider.zip’ saved [865110/865110]
+
+[root@ip-172-31-24-168 temp]# ls -lrt
+total 848
+-rw-r--r--. 1 root root 865110 Jan 18  2022 kider.zip
+[root@ip-172-31-24-168 temp]# ls -lrt
+total 848
+-rw-r--r--. 1 root root 865110 Jan 18  2022 kider.zip
+[root@ip-172-31-24-168 temp]# unzip kider.zip
+Archive:  kider.zip
+  inflating: preschool-website-template/404.html  
+  inflating: preschool-website-template/about.html  
+  inflating: preschool-website-template/appointment.html  
+  inflating: preschool-website-template/call-to-action.html  
+  inflating: preschool-website-template/classes.html  
+  inflating: preschool-website-template/contact.html  
+   creating: preschool-website-template/css/
+  inflating: preschool-website-template/css/bootstrap.min.css  
+  inflating: preschool-website-template/css/style.css  
+  inflating: preschool-website-template/facility.html  
+   creating: preschool-website-template/img/
+  inflating: preschool-website-template/img/about-1.jpg  
+  inflating: preschool-website-template/img/about-2.jpg  
+  inflating: preschool-website-template/img/about-3.jpg  
+  inflating: preschool-website-template/img/appointment.jpg  
+  inflating: preschool-website-template/img/bg-header-bottom.png  
+  inflating: preschool-website-template/img/bg-header-top.png  
+  inflating: preschool-website-template/img/call-to-action.jpg  
+  inflating: preschool-website-template/img/carousel-1.jpg  
+  inflating: preschool-website-template/img/carousel-2.jpg  
+  inflating: preschool-website-template/img/classes-1.jpg  
+  inflating: preschool-website-template/img/classes-2.jpg  
+  inflating: preschool-website-template/img/classes-3.jpg  
+  inflating: preschool-website-template/img/classes-4.jpg  
+  inflating: preschool-website-template/img/classes-5.jpg  
+  inflating: preschool-website-template/img/classes-6.jpg  
+  inflating: preschool-website-template/img/team-1.jpg  
+  inflating: preschool-website-template/img/team-2.jpg  
+  inflating: preschool-website-template/img/team-3.jpg  
+  inflating: preschool-website-template/img/testimonial-1.jpg  
+  inflating: preschool-website-template/img/testimonial-2.jpg  
+  inflating: preschool-website-template/img/testimonial-3.jpg  
+  inflating: preschool-website-template/img/user.jpg  
+  inflating: preschool-website-template/index.html  
+   creating: preschool-website-template/js/
+  inflating: preschool-website-template/js/main.js  
+   creating: preschool-website-template/lib/
+   creating: preschool-website-template/lib/animate/
+  inflating: preschool-website-template/lib/animate/animate.css  
+  inflating: preschool-website-template/lib/animate/animate.min.css  
+   creating: preschool-website-template/lib/easing/
+  inflating: preschool-website-template/lib/easing/easing.js  
+  inflating: preschool-website-template/lib/easing/easing.min.js  
+   creating: preschool-website-template/lib/owlcarousel/
+   creating: preschool-website-template/lib/owlcarousel/assets/
+  inflating: preschool-website-template/lib/owlcarousel/assets/ajax-loader.gif  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.carousel.css  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.carousel.min.css  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.theme.default.css  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.theme.default.min.css  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.theme.green.css  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.theme.green.min.css  
+  inflating: preschool-website-template/lib/owlcarousel/assets/owl.video.play.png  
+  inflating: preschool-website-template/lib/owlcarousel/LICENSE  
+  inflating: preschool-website-template/lib/owlcarousel/owl.carousel.js  
+  inflating: preschool-website-template/lib/owlcarousel/owl.carousel.min.js  
+   creating: preschool-website-template/lib/waypoints/
+  inflating: preschool-website-template/lib/waypoints/links.php  
+  inflating: preschool-website-template/lib/waypoints/waypoints.min.js  
+   creating: preschool-website-template/lib/wow/
+  inflating: preschool-website-template/lib/wow/wow.js  
+  inflating: preschool-website-template/lib/wow/wow.min.js  
+  inflating: preschool-website-template/LICENSE.txt  
+  inflating: preschool-website-template/preschool-website-template.jpg  
+  inflating: preschool-website-template/READ-ME.txt  
+   creating: preschool-website-template/scss/
+  inflating: preschool-website-template/scss/bootstrap.scss  
+   creating: preschool-website-template/scss/bootstrap/
+   creating: preschool-website-template/scss/bootstrap/scss/
+  inflating: preschool-website-template/scss/bootstrap/scss/_accordion.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_alert.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_badge.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_breadcrumb.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_button-group.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_buttons.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_card.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_carousel.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_close.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_containers.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_dropdown.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_forms.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_functions.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_grid.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_helpers.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_images.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_list-group.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_mixins.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_modal.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_nav.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_navbar.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_offcanvas.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_pagination.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_popover.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_progress.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_reboot.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_root.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_spinners.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_tables.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_toasts.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_tooltip.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_transitions.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_type.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_utilities.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/_variables.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/bootstrap.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/bootstrap-grid.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/bootstrap-reboot.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/bootstrap-utilities.scss  
+   creating: preschool-website-template/scss/bootstrap/scss/forms/
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_floating-labels.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_form-check.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_form-control.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_form-range.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_form-select.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_form-text.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_input-group.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_labels.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/forms/_validation.scss  
+   creating: preschool-website-template/scss/bootstrap/scss/helpers/
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_clearfix.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_colored-links.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_position.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_ratio.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_stretched-link.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_text-truncation.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/helpers/_visually-hidden.scss  
+   creating: preschool-website-template/scss/bootstrap/scss/mixins/
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_alert.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_border-radius.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_box-shadow.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_breakpoints.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_buttons.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_caret.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_clearfix.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_color-scheme.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_container.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_deprecate.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_forms.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_gradients.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_grid.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_image.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_list-group.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_lists.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_pagination.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_reset-text.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_resize.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_table-variants.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_text-truncate.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_transition.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_utilities.scss  
+  inflating: preschool-website-template/scss/bootstrap/scss/mixins/_visually-hidden.scss  
+   creating: preschool-website-template/scss/bootstrap/scss/utilities/
+  inflating: preschool-website-template/scss/bootstrap/scss/utilities/_api.scss  
+   creating: preschool-website-template/scss/bootstrap/scss/vendor/
+  inflating: preschool-website-template/scss/bootstrap/scss/vendor/_rfs.scss  
+  inflating: preschool-website-template/team.html  
+  inflating: preschool-website-template/testimonial.html  
+[root@ip-172-31-24-168 temp]# ls -lrt
+total 864
+-rw-r--r--. 1 root root 865110 Jan 18  2022 kider.zip
+drwxr-xr-x. 7 root root  16384 Jul 29 11:16 preschool-website-template
+[root@ip-172-31-24-168 temp]# cd preschool-website-template
+[root@ip-172-31-24-168 preschool-website-template]# ls -lrt
+total 340
+-rw-r--r--. 1 root root   1456 Aug 16  2021 LICENSE.txt
+-rw-r--r--. 1 root root    540 Jan 15  2022 READ-ME.txt
+-rw-r--r--. 1 root root  14491 Jan 17  2022 facility.html
+-rw-r--r--. 1 root root  18456 Jan 17  2022 about.html
+-rw-r--r--. 1 root root  48533 Jan 17  2022 index.html
+-rw-r--r--. 1 root root  34680 Jan 17  2022 classes.html
+-rw-r--r--. 1 root root  17186 Jan 17  2022 team.html
+-rw-r--r--. 1 root root  12054 Jan 17  2022 call-to-action.html
+-rw-r--r--. 1 root root  14338 Jan 17  2022 appointment.html
+-rw-r--r--. 1 root root  13963 Jan 17  2022 testimonial.html
+-rw-r--r--. 1 root root  11404 Jan 17  2022 404.html
+-rw-r--r--. 1 root root  16346 Jan 17  2022 contact.html
+-rw-r--r--. 1 root root 106080 Jan 18  2022 preschool-website-template.jpg
+drwxr-xr-x. 3 root root     45 Jan 18  2022 scss
+drwxr-xr-x. 7 root root     82 Jan 18  2022 lib
+drwxr-xr-x. 2 root root     21 Jan 18  2022 js
+drwxr-xr-x. 2 root root  16384 Jan 18  2022 img
+drwxr-xr-x. 2 root root     48 Jan 18  2022 css
+[root@ip-172-31-24-168 preschool-website-template]# mv * /var/www/html/
+[root@ip-172-31-24-168 preschool-website-template]# cd /var/www/html/
+[root@ip-172-31-24-168 html]# ls -lrt
+total 340
+-rw-r--r--. 1 root root   1456 Aug 16  2021 LICENSE.txt
+-rw-r--r--. 1 root root    540 Jan 15  2022 READ-ME.txt
+-rw-r--r--. 1 root root  14491 Jan 17  2022 facility.html
+-rw-r--r--. 1 root root  18456 Jan 17  2022 about.html
+-rw-r--r--. 1 root root  48533 Jan 17  2022 index.html
+-rw-r--r--. 1 root root  34680 Jan 17  2022 classes.html
+-rw-r--r--. 1 root root  17186 Jan 17  2022 team.html
+-rw-r--r--. 1 root root  12054 Jan 17  2022 call-to-action.html
+-rw-r--r--. 1 root root  14338 Jan 17  2022 appointment.html
+-rw-r--r--. 1 root root  13963 Jan 17  2022 testimonial.html
+-rw-r--r--. 1 root root  11404 Jan 17  2022 404.html
+-rw-r--r--. 1 root root  16346 Jan 17  2022 contact.html
+-rw-r--r--. 1 root root 106080 Jan 18  2022 preschool-website-template.jpg
+drwxr-xr-x. 3 root root     45 Jan 18  2022 scss
+drwxr-xr-x. 7 root root     82 Jan 18  2022 lib
+drwxr-xr-x. 2 root root     21 Jan 18  2022 js
+drwxr-xr-x. 2 root root  16384 Jan 18  2022 img
+drwxr-xr-x. 2 root root     48 Jan 18  2022 css
+[root@ip-172-31-24-168 html]# systemctl status httpd
+○ httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:httpd.service(8)
+[root@ip-172-31-24-168 html]# systemctl enable httpd
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+[root@ip-172-31-24-168 html]# systemctl start httpd
+[root@ip-172-31-24-168 html]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-07-29 11:24:28 UTC; 18s ago
+       Docs: man:httpd.service(8)
+   Main PID: 26449 (httpd)
+     Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec"
+      Tasks: 177 (limit: 1114)
+     Memory: 12.9M
+        CPU: 71ms
+     CGroup: /system.slice/httpd.service
+             ├─26449 /usr/sbin/httpd -DFOREGROUND
+             ├─26469 /usr/sbin/httpd -DFOREGROUND
+             ├─26473 /usr/sbin/httpd -DFOREGROUND
+             ├─26474 /usr/sbin/httpd -DFOREGROUND
+             └─26475 /usr/sbin/httpd -DFOREGROUND
+
+Jul 29 11:24:28 ip-172-31-24-168.ap-southeast-2.compute.internal systemd[1]: Starting httpd.service - The Apache HTTP Server...
+Jul 29 11:24:28 ip-172-31-24-168.ap-southeast-2.compute.internal systemd[1]: Started httpd.service - The Apache HTTP Server.
+Jul 29 11:24:28 ip-172-31-24-168.ap-southeast-2.compute.internal httpd[26449]: Server configured, listening on: port 80
+[root@ip-172-31-24-168 html]# 
