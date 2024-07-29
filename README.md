@@ -1,8 +1,13 @@
 **Name**: R.RITHIKA
+
 **Company**:CODTECH IT SOLUTIONS PVT.LTD
+
 **ID**:CT4CC4173D
+
 **Domain**:Cloud Computing
+
 **Duration**:July 5th 2024 to August 5th 2024
+
 **Mentor**:Neela Santhosh Kumar
 
 
