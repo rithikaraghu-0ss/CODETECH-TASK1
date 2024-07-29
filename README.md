@@ -22,16 +22,24 @@ AWS also provides tools for security, monitoring, and automation to simplify ope
 
 ### Key Activities
 **Set Up Infrastructure**: Provision and configure AWS resources like EC2, RDS, and S3.
+
 **Deploy Application:** Upload and configure your app, set up load balancers, and establish auto-scaling.
+
 **Monitor and Optimize:** Use tools like CloudWatch to track performance, adjust resources, and manage costs.
 
 ### Tecnologies Used 
 **Amazon EC2:** For scalable compute capacity and virtual servers to host your application.
+
 **Amazon RDS:** For managed relational database services to handle application data.
+
 **Amazon S3:** For scalable storage of static files, such as images and backups.
+
 **Elastic Load Balancing (ELB):** To distribute incoming traffic across multiple instances for improved availability.
+
 **AWS CloudWatch:** For monitoring and logging application performance and resource usage.
+
 **AWS Lambda:** For serverless compute functions to handle specific tasks or event-driven processes.
+
 **Amazon CloudFront:** For content delivery and caching to improve application performance globally.
 
 ### Key Insights
